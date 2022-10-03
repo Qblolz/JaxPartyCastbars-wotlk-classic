@@ -29,7 +29,7 @@ function JPC:UpdateBars()
 		sp:SetScale(JaxPartyCastBars.db.profile.scale)
 		if (GetNumPartyMembers() > k)  then
 			sp:ClearAllPoints()
-			if (raidFramesOn == 1) or (UnitInRaid("player") and not InArena()) then
+			if (raidFramesOn == 1) or (UnitInRaid("player")) then
 				for g =1,GetNumPartyMembers(),1 do
 					local raidFrame = nil
 					if CompactRaidFrameManager_GetSetting("KeepGroupsTogether") then
